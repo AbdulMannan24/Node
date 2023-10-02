@@ -22,3 +22,4 @@
 // console.log(a(10));
 // here is a function imported from exporting file 
 
+//NPM - node package manager
