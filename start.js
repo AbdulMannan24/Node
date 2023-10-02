@@ -23,3 +23,13 @@
 // here is a function imported from exporting file 
 
 //NPM - node package manager
+// playstore of packages 
+// npm install package_name
+// -> npm i package_name
+
+// GET route me url me data dikhta hai 
+// POST route me url me data nahi dikhta 
+
+// MIDDLEWARES IN JS
+
+
