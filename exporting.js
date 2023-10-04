@@ -14,3 +14,9 @@
 /*
     this is a comment for multiple lines of code 
 */
+
+// const a = "this is a string";
+// // module.exports : this returns an empty object
+// const b = " this is string with"
+// // module.exports = a, b; only first one is exported
+// module.exports = {a,b};

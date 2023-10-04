@@ -20,7 +20,13 @@
 //importing functions
 // const a = require("./exporting");
 // console.log(a(10));
-// here is a function imported from exporting file 
+// here is a function imported from exporting file
+
+// importing a file and printing it directly
+// const app = require('./exporting');
+// // console.log(app)
+// console.log(app.a);
+// console.log(app.b); 
 
 //NPM - node package manager
 // playstore of packages 
@@ -30,6 +36,10 @@
 // GET route me url me data dikhta hai 
 // POST route me url me data nahi dikhta 
 
-// MIDDLEWARES IN JS
+// // fs module in js
+// const fs = require('fs');
+// printing the fs module in console, gives the details of funcitons etc
+// console.log(fs);
+
 
 
