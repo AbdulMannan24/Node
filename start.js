@@ -37,9 +37,30 @@
 // POST route me url me data nahi dikhta 
 
 // // fs module in js
-// const fs = require('fs');
+//const fs = require('fs');
 // printing the fs module in console, gives the details of funcitons etc
 // console.log(fs);
+//fs.writeFileSync('app.txt', 'write this is app file ')
+// similarly all CRUD operations can be performed using fs module
 
+// PATH AND QUERY PARAMETERS
+//path parameter
+const express = require('express');
+const app = express();
+app.get('/', (req, res) =>{
+    res.send("Welcome to the world of backend");
+});
 
+app.get('/home/:dynamic', (req, res) => {
+    //const route = req.params.dynamic;
+    //using destructuring
+    const {dynamic} = req.params;
+    res.send(`This is ${dynamic}`);
+});
+
+app.listen(4000, ()=>{
+     console.log("App is running on port 4000");
+});
+
+//QUERY PARAMETER
 
