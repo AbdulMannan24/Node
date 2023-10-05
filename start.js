@@ -47,9 +47,12 @@
 //path parameter
 const express = require('express');
 const app = express();
-app.get('/', (req, res) =>{
-    res.send("Welcome to the world of backend");
-});
+
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+// app.get('/', (req, res) =>{
+//     res.send("Welcome to the world of backend");
+// });
 
 app.get('/home/:dynamic', (req, res) => {
     //const route = req.params.dynamic;
@@ -66,7 +69,25 @@ app.get('/search', (req, res) => {
 });
 
 //TEMPLATING
+app.get('/', (req, res) => {
+    res.render('index')
+});
 
+app.get('/user', (req, res) => {
+    //const user = req;// not working because needs app.use(express.urlencoded({ extended: false }));
+    // console.log(req.query);
+    const {name, age} = req.query;// in get method u need to use req.query as query is openly visible
+    res.send(`This is ${name} ${age}`);
+    //http://localhost:4000/user?name=abcd&age=10
+});
+
+app.post('/user', (req, res) => {
+    // more secured way of taking input from user witout exposing in the url
+    const {name, age} = req.body;// in post method u need to use the req.body property
+    console.log(req);
+    console.log(name, age);
+    res.send(`this is ${name} ${age}`);
+});
 
 app.listen(4000, ()=>{
      console.log("App is running on port 4000");
