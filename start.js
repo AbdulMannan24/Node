@@ -65,6 +65,9 @@ app.get('/search', (req, res) => {
     res.send(`${name} ${last}`);
 });
 
+//TEMPLATING
+
+
 app.listen(4000, ()=>{
      console.log("App is running on port 4000");
 });
