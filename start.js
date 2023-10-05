@@ -58,9 +58,16 @@ app.get('/home/:dynamic', (req, res) => {
     res.send(`This is ${dynamic}`);
 });
 
+//QUERY PARAMETER
+// when we need multiple values from the request
+app.get('/search', (req, res) => {
+    const {name,last} = req.query;
+    res.send(`${name} ${last}`);
+});
+
 app.listen(4000, ()=>{
      console.log("App is running on port 4000");
 });
 
-//QUERY PARAMETER
+
 
